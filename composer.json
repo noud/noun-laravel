@@ -1,0 +1,36 @@
+{
+    "name": "noud/noun-laravel",
+    "require": {
+        "php": ">=7.2.5",
+        "doctrine/inflector": "dev-dutch"
+    },
+    "description": "Laravel Inflector API",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Noud de Brouwer",
+            "email": "noud4@home.nl"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Inflector\\API\\": "src/app/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Inflector\\API\\Providers\\InflectorAPIServiceProvider"
+            ]
+        }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../inflector"
+        }
+    ]
+}

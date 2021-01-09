@@ -1,0 +1,8 @@
+{
+  "name": "noun-laravel",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "erd-js": "dev-main"
+  }
+}

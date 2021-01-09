@@ -1,0 +1,4 @@
+src/database/migrations/*
+# packages
+node_modules
+vendor
