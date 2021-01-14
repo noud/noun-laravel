@@ -27,7 +27,7 @@ class Inflectible
     public static function getIrregular(): iterable
     {
 @foreach($irregulars as $irregular)
-        yield new Substitution(new Word('{{$irregular->singular}}'), new Word('{{$irregular->singular}}'));
+        yield new Substitution(new Word('{{$irregular->singular}}'), new Word('{{$irregular->plural}}'));
 @endforeach
     }
 }

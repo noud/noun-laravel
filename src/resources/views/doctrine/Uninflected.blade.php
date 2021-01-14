@@ -9,8 +9,8 @@ class Uninflected
     {
         yield from self::getDefault();
 
-@foreach($singulars as $singular)
-        yield new Pattern('{{ $singular->word }}');
+@foreach($plurals as $plural)
+        yield new Pattern('{{ $plural->word }}');
 @endforeach
     }
 
@@ -21,8 +21,8 @@ class Uninflected
     {
         yield from self::getDefault();
 
-@foreach($plurals as $plural)
-        yield new Pattern('{{ $plural->word }}');
+@foreach($singulars as $singular)
+        yield new Pattern('{{ $singular->word }}');
 @endforeach
     }
 

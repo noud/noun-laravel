@@ -19,8 +19,10 @@ class GenerateDoctrineController extends BaseController
 
     public function RulesInflectible(string $file)
     {
-        $irregulars = IrregularNoun::where('rule_id', Config::get('nouns-laravel.rules.irreguar'))->get();
-var_dump($irregulars);
+        $irregulars = IrregularNoun::whereHas('rule', function($q) {
+            $q->where('inflector_irregular', true);
+        })->get();
+
         return $this->ViewMake($file, [
             'irregulars' => $irregulars
         ]);
@@ -31,7 +33,7 @@ var_dump($irregulars);
         $singulars = NormalNoun::where('rule_id', Config::get('nouns-laravel.rules.singular'))->get();
         $plurals = NormalNoun::where('rule_id', Config::get('nouns-laravel.rules.plural'))->get();
         $defaults = NormalNoun::where('rule_id', Config::get('nouns-laravel.rules.default'))->get();
-var_dump($singulars);
+
         return $this->ViewMake($file, [
             'singulars' => $singulars,
             'plurals' => $plurals,
