@@ -1,6 +1,6 @@
 <?php
 
-namespace Inflector\API\Services;
+namespace Nouns\API\Http\Controllers;
 
 class InflectorService
 {

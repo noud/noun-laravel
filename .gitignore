@@ -1,3 +1,5 @@
+# generated
+src/app/Models/*
 src/database/migrations/*
 # packages
 node_modules

@@ -1,6 +1,6 @@
 @include('doctrine/header/header')
 
-namespace Doctrine\Tests\Inflector\Rules\{{ $language|ucfirst }};
+namespace Doctrine\Tests\Inflector\Rules\{{ ucfirst($language) }};
 
 use Doctrine\Inflector\Inflector;
 use Doctrine\Inflector\InflectorFactory;

@@ -1,38 +1,38 @@
-@include('doctrine/header/header-rules')
+@include('nouns-laravel::doctrine/header/header-rules')
 
-class Inflectible
+class Uninflected
 {
     /**
-     * @return iterable{!! <Pattern> !!}
-     */
-    public static function getPlural(): iterable
-    {
-        yield from self::getDefault();
-
-        @foreach($singulars as $singular)
-            yield new Pattern(\'{{$singular->singular}}\');
-        @endforeach
-    }
-
-    /**
-     * @return iterable{!! <Pattern> !!}
+     * @return iterable{!! '<Pattern>' !!}
      */
     public static function getSingular(): iterable
     {
         yield from self::getDefault();
 
-        @foreach($plurals as $plural)
-            yield new Pattern(\'{{$plural->plural}}\');
-        @endforeach
+@foreach($singulars as $singular)
+        yield new Pattern('{{ $singular->word }}');
+@endforeach
     }
 
     /**
-     * @return iterable{!! <Pattern> !!}
+     * @return iterable{!! '<Pattern>' !!}
+     */
+    public static function getPlural(): iterable
+    {
+        yield from self::getDefault();
+
+@foreach($plurals as $plural)
+        yield new Pattern('{{ $plural->word }}');
+@endforeach
+    }
+
+    /**
+     * @return iterable{!! '<Pattern>' !!}
      */
     public static function getDefault(): iterable
     {
-        @foreach($defaults as $default)
-            yield new Pattern(\'{{$default->default}}\');
-        @endforeach
+@foreach($defaults as $default)
+        yield new Pattern('{{ $default->word }}');
+@endforeach
     }
 }

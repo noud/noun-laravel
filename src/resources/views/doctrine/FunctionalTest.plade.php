@@ -1,6 +1,6 @@
-@include('doctrine/header/header-tests')
+@include('nouns-laravel::doctrine/header/header-tests')
 
-class {{ $language|ucfirst }}FunctionalTest extends LanguageFunctionalTest
+class {{ ucfirst($language) }}FunctionalTest extends LanguageFunctionalTest
 {
     /**
      * @return list{!! <array{string, string}> !!}
@@ -16,6 +16,6 @@ class {{ $language|ucfirst }}FunctionalTest extends LanguageFunctionalTest
 
     protected function createInflector(): Inflector
     {
-        return InflectorFactory::createForLanguage(Language::{{ $language|uc }})->build();
+        return InflectorFactory::createForLanguage(Language::{{ uc($language) }})->build();
     }
 }

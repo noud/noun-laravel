@@ -1,5 +1,5 @@
 {
-    "name": "noud/noun-laravel",
+    "name": "noud/nouns-laravel",
     "require": {
         "php": ">=7.2.5",
         "doctrine/inflector": "dev-dutch"
@@ -17,13 +17,13 @@
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "Inflector\\API\\": "src/app/"
+            "Nouns\\API\\": "src/app/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Inflector\\API\\Providers\\InflectorAPIServiceProvider"
+                "Nouns\\API\\Providers\\NounsAPIServiceProvider"
             ]
         }
     },

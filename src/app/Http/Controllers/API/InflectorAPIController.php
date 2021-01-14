@@ -1,6 +1,6 @@
 <?php
 
-namespace Inflector\API\Http\Controllers\API;
+namespace Nouns\API\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Response;
