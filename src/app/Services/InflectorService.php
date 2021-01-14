@@ -1,16 +1,18 @@
 <?php
 
-namespace Nouns\Http\Controllers;
+namespace Nouns\Services;
+
+use Nouns\Models\Noun;
 
 class InflectorService
 {
-    public function plural(string $singular): string
+    public function plural(string $singular): ?Noun
     {
-        return 'plural';
+        return Noun::where('singular', $singular)->first();
     }
 
-    public function singular(string $plural): string
+    public function singular(string $plural): ?Noun
     {
-        return 'singular';
+        return Noun::where('plural', $plural)->first();
     }
 }

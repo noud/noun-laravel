@@ -16,6 +16,7 @@ class NounsServiceProvider extends ServiceProvider
         }
 
         $this->loadMigrationsFrom(__DIR__.'/../../database/migrations/2022_08_28_214054_create_tables_table.php');
+        $this->loadRoutesFrom(__DIR__.'/../../routes/api.php');
         $this->loadRoutesFrom(__DIR__.'/../../routes/web.php');
 
         $this->publishes([
