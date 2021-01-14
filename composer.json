@@ -4,7 +4,7 @@
         "php": ">=7.2.5",
         "doctrine/inflector": "dev-dutch"
     },
-    "description": "Laravel Inflector API",
+    "description": "Nouns Laravel package",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -17,13 +17,13 @@
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "Nouns\\API\\": "src/app/"
+            "Nouns\\": "src/app/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Nouns\\API\\Providers\\NounsAPIServiceProvider"
+                "Nouns\\Providers\\NounsServiceProvider"
             ]
         }
     },

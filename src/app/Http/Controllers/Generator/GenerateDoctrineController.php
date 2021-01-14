@@ -1,11 +1,11 @@
 <?php
 
-namespace Nouns\API\Http\Controllers\Generator;
+namespace Nouns\Http\Controllers\Generator;
 
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\View;
-use Nouns\API\Models\IrregularNoun;
-use Nouns\API\Models\NormalNoun;
+use Nouns\Models\IrregularNoun;
+use Nouns\Models\NormalNoun;
 
 class GenerateDoctrineController extends BaseController
 {

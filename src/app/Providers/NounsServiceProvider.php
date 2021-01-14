@@ -1,11 +1,11 @@
 <?php
 
-namespace Nouns\API\Providers;
+namespace Nouns\Providers;
 
 use API\Platform\Console\Commands\Generate;
 use Illuminate\Support\ServiceProvider;
 
-class NounsAPIServiceProvider extends ServiceProvider
+class NounsServiceProvider extends ServiceProvider
 {
     public function boot()
     {

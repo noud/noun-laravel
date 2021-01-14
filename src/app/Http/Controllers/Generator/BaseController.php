@@ -1,6 +1,6 @@
 <?php
 
-namespace Nouns\API\Http\Controllers\Generator;
+namespace Nouns\Http\Controllers\Generator;
 
 use App\Http\Controllers\Controller;
 
