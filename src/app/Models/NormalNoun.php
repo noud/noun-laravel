@@ -64,4 +64,9 @@ class NormalNoun extends Model
     {
         return $this->hasMany(\App\Models\NormalNounReference::class, 'normal_noun_id');
     }
+
+    public function rule()
+    {
+        return $this->oneToMany(Rule::class);
+    }
 }

@@ -7,20 +7,19 @@ use Illuminate\Database\Eloquent\Model as Model;
 
 
 /**
- * Class IrregularNoun
+ * Class Rule
  * @package App\Models
- * @version April 4, 2021, 4:24 pm UTC
+ * @version April 4, 2021, 4:38 pm UTC
  *
  * @property string $id
- * @property string $singular
- * @property string $plural
- * @property string $rule_id
+ * @property string $name
+ * @property string $inflector_irregular
  */
-class IrregularNoun extends Model
+class Rule extends Model
 {
 
 
-    public $table = 'irregular_nouns';
+    public $table = 'rules';
     
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
@@ -30,9 +29,8 @@ class IrregularNoun extends Model
 
     public $fillable = [
         'id',
-        'singular',
-        'plural',
-        'rule_id'
+        'name',
+        'inflector_irregular'
     ];
 
     /**
@@ -42,9 +40,8 @@ class IrregularNoun extends Model
      */
     protected $casts = [
         'id' => 'string',
-        'singular' => 'string',
-        'plural' => 'string',
-        'rule_id' => 'string'
+        'name' => 'string',
+        'inflector_irregular' => 'string'
     ];
 
     /**
@@ -54,13 +51,17 @@ class IrregularNoun extends Model
      */
     public static $rules = [
         'id' => 'required|string|max:255',
-        'singular' => 'nullable|string|max:255',
-        'plural' => 'nullable|string|max:255',
-        'rule_id' => 'nullable|string|max:255'
+        'name' => 'required|string|max:255',
+        'inflector_irregular' => 'required|string|max:255'
     ];
 
-    public function rule()
+    public function normalNouns()
     {
-        return $this->oneToMany(Rule::class);
+        return $this->hasMany(NormalNoun::class);
+    }
+
+    public function IrregularNouns()
+    {
+        return $this->hasMany(IrregularNoun::class);
     }
 }
