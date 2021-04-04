@@ -8,4 +8,3 @@ singular/{plural}
 ```
 ## Naming conventions
 - [Laravel](http://webdevetc.com/blog/laravel-naming-conventions/)
-# [📁](http://github.com/noud)
