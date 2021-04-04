@@ -1,5 +1,6 @@
 # generated
 src/app/Models/*
+!src/app/Models/IrregularNoun.php
 !src/app/Models/NormalNoun.php
 src/database/migrations/*
 # packages

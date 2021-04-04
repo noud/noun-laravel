@@ -16,4 +16,5 @@ composer require doctrine/dbal
 composer require infyomlabs/laravel-generator --dev
 php artisan infyom:publish
 php artisan infyom:model NormalNoun --fromTable
+php artisan infyom:model IrregularNoun --fromTable
 ```
