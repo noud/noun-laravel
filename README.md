@@ -15,5 +15,5 @@ composer require noud/nouns-laravel
 composer require doctrine/dbal
 composer require infyomlabs/laravel-generator --dev
 php artisan infyom:publish
-php artisan infyom:model  --fromTable normal_noun
+php artisan infyom:model NormalNoun --fromTable
 ```
