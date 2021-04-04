@@ -8,3 +8,12 @@ singular/{plural}
 ```
 ## Naming conventions
 - [Laravel](http://webdevetc.com/blog/laravel-naming-conventions/)
+## Tooling
+```
+composer require noud/schema-builder --dev
+composer require noud/nouns-laravel
+composer require doctrine/dbal
+composer require infyomlabs/laravel-generator --dev
+php artisan infyom:publish
+php artisan infyom:model  --fromTable normal_noun
+```
