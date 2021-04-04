@@ -1,5 +1,6 @@
 # generated
 src/app/Models/*
+!src/app/Models/NormalNoun.php
 src/database/migrations/*
 # packages
 node_modules
