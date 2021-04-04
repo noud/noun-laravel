@@ -2,7 +2,7 @@
     "name": "noud/nouns-laravel",
     "require": {
         "php": ">=7.2.5",
-        "doctrine/inflector": "dev-dutch"
+        "doctrine/inflector": "^1"
     },
     "description": "Nouns Laravel package",
     "type": "library",
