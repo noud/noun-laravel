@@ -26,11 +26,5 @@
                 "Nouns\\Providers\\NounsServiceProvider"
             ]
         }
-    },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "../inflector"
-        }
-    ]
+    }
 }
