@@ -61,6 +61,6 @@ class IrregularNoun extends Model
 
     public function rule()
     {
-        return $this->oneToMany(Rule::class);
+        return $this->belongsTo(Rule::class);
     }
 }
