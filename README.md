@@ -12,6 +12,7 @@ singular/{plural}
 ```
 composer require noud/schema-builder --dev
 composer require noud/nouns-laravel
+php artisan vendor:publish
 composer require doctrine/dbal
 composer require infyomlabs/laravel-generator --dev
 php artisan infyom:publish
