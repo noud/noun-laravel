@@ -19,11 +19,6 @@ php artisan infyom:publish
 php artisan infyom:model NormalNoun --fromTable
 php artisan infyom:model IrregularNoun --fromTable
 ```
-For the API follow
-```
-https://infyom.com/open-source/laravelgenerator/docs/8.0/generator-options#swagger
-```
-Laravel host
-```
-https://github.com/noud/laravel/tree/8.x-nouns
-```
+For the API follow [infyom](https://infyom.com/open-source/laravelgenerator/docs/8.0/generator-options#swagger)
+
+[Laravel host](https://github.com/noud/laravel/tree/8.x-nouns)
