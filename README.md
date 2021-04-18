@@ -23,3 +23,7 @@ For the API follow
 ```
 https://infyom.com/open-source/laravelgenerator/docs/8.0/generator-options#swagger
 ```
+Laravel host
+```
+https://github.com/noud/laravel/tree/8.x-nouns
+```
